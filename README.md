@@ -2,9 +2,9 @@
 
 Analysis and investigation of a simulated phishing email, from header forensics and IOC extraction through social-engineering breakdown and SOC response recommendations.
 
-**Incident ID:** INC-001
-**Severity:** Medium
-**Tools Used:** MXToolBox, VirusTotal, IP Lookup, Base64 Decoder, Email Header Analyzer
+* **Incident ID:** INC-001
+* **Severity:** Medium
+* **Tools Used:** MXToolBox, VirusTotal, IP Lookup, Base64 Decoder, Email Header Analyzer
 
 ---
 
