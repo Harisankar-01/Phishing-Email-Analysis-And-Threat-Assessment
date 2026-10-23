@@ -1,6 +1,6 @@
 # Phishing Email Analysis & Threat Assessment
 
-Analysis and investigation of a simulated phishing email, from header forensics and IOC extraction through social-engineering breakdown and SOC response recommendations.
+Analysis and investigation of a simulated phishing email, from header analysis and IOC extraction through social-engineering breakdown and SOC response recommendations.
 
 * **Incident ID:** INC-001
 * **Severity:** Medium
@@ -18,8 +18,8 @@ This project documents the end-to-end investigation of a sample phishing email, 
 
 | Artifact | Finding |
 |---|---|
-| Display/From address | nooreply@qqnyoxisrnb.us |
-| SMTP envelope sender | naldqxdfvvbfi@google-appleamazon.chelsea.uk.com.tountas.org |
+| Display/From address | nooreply@qqnyoxisrnb[.]us |
+| SMTP envelope sender | naldqxdfvvbfi@google-appleamazon[.]chelsea[.]uk[.]com[.]tountas[.]org |
 | Sending IP | 89.252.128.143 — blacklisted (RATS Spam, Spamhaus ZEN) |
 | Subject | "⚠️ Urgent Warning! Your account has been locked... Renew for free today!" |
 | Embedded URL | `storage.googleapis.com/worklinks/evrtinggood.html#...` |
@@ -67,7 +67,7 @@ Breaking these down individually, rather than just saying "it looked suspicious,
 
 ## URL & Redirection Analysis
 
-The embedded link used Google-hosted infrastructure (`storage.googleapis.com`) as a first hop, a common technique to evade naive URL filtering by hiding behind a trusted domain. The link then redirected to `sidentin.edu.eu.org`, which VirusTotal flagged as phishing.
+The embedded link used Google-hosted infrastructure (`storage.googleapis.com`) as a first hop, a common technique to evade naive URL filtering by hiding behind a trusted domain. The link then redirected to `sidentin[.]edu[.]eu[.]org`, which VirusTotal flagged as phishing.
 
 **Key takeaway:** hosting on legitimate infrastructure (Google Cloud Storage, in this case) does not mean the content or the sender is legitimate, this is worth calling out explicitly since it's a common point of confusion.
 
